@@ -1,0 +1,121 @@
+@import '@/styles/utils.scss';
+@import '@/styles/colors.scss';
+
+@mixin button {
+  position: absolute;
+  z-index: 100;
+  width: px2rem(50);
+  height: px2rem(50);
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: #e2c199;
+  border-radius: px2rem(500);
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: px2rem(50);
+}
+
+.category {
+  width: 100%;
+  background-color: white;
+
+  .content {
+    padding: px2rem(58) 0;
+
+    .header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .header__left {
+        display: flex;
+        align-items: flex-end;
+
+        .title {
+          color: #333;
+          font-size: px2rem(28);
+          font-weight: 700;
+          line-height: px2rem(28);
+          text-decoration: none;
+
+          &:hover {
+            color: $mainGold;
+          }
+        }
+      }
+
+      .header__right {
+        display: flex;
+        align-items: flex-end;
+
+        .list {
+          display: flex;
+          align-items: flex-end;
+          font-size: px2rem(14);
+          line-height: px2rem(14);
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          .list__item {
+            .list__title {
+              color: #333;
+              text-decoration: none;
+              cursor: pointer;
+
+              &:hover {
+                color: $mainGold;
+              }
+            }
+
+            span {
+              margin: 0 px2rem(8);
+            }
+
+            &:last-child {
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .header__more {
+          color: $fontBlack;
+          text-decoration: none;
+          font-size: px2rem(14);
+          line-height: px2rem(14);
+          margin-left: px2rem(28);
+
+          &:hover {
+            color: $mainGold;
+          }
+        }
+      }
+    }
+
+    .carousel {
+      position: relative;
+      height: px2rem(310);
+      margin-top: px2rem(20);
+    }
+
+    .products {
+      margin-top: px2rem(20);
+      display: flex;
+      justify-content: center;
+
+      .product {
+        margin-left: px2rem(10);
+        width: px2rem(256);
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

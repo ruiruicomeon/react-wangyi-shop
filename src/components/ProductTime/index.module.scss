@@ -1,0 +1,114 @@
+@import '@/styles/utils';
+@import '@/styles/colors';
+
+.product {
+  width: px2rem(433);
+  height: px2rem(214);
+  border: 1px solid #f0ece4;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  .header {
+    .image {
+      display: block;
+      width: px2rem(180);
+      height: px2rem(180);
+      margin: 0 auto;
+    }
+  }
+
+  .content {
+    padding-left: px2rem(6);
+    padding-top: px2rem(14);
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      color: $fontBlack;
+      text-decoration: none;
+      line-height: px2rem(26);
+      font-size: px2rem(16);
+      font-weight: 400;
+    }
+
+    .subtitle {
+      color: #999;
+      text-decoration: none;
+      font-size: px2rem(14);
+      font-weight: 400;
+      line-height: px2rem(24);
+    }
+
+    .progress {
+      display: flex;
+      align-items: center;
+
+      .progress__bar {
+        position: relative;
+        width: px2rem(152);
+        height: px2rem(10);
+        margin: px2rem(2) 0;
+        border: 1px solid #f2cecd;
+        border-radius: px2rem(5);
+        overflow: hidden;
+        margin-right: px2rem(14);
+
+        .progress__inner {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: px2rem(120.5);
+          background-color: #ffe5e5;
+          height: px2rem(10);
+        }
+      }
+
+      .progress__title {
+        font-size: px2rem(14);
+        color: #999;
+        line-height: px2rem(14);
+      }
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      color: #be4141;
+
+      .price__title {
+        font-size: px2rem(14);
+        line-height: px2rem(14);
+      }
+
+      .price__now {
+        margin-right: px2rem(12);
+        font-weight: 700;
+        font-size: px2rem(24);
+        line-height: px2rem(24);
+      }
+
+      .price__old {
+        text-decoration: line-through;
+        color: #999;
+        font-size: px2rem(14);
+        line-height: px2rem(14);
+      }
+    }
+
+    .buy {
+      display: block;
+      width: px2rem(118);
+      height: px2rem(31);
+      margin-top: 18px;
+      line-height: 31px;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 2px;
+      cursor: pointer;
+      background-color: #be4141;
+      color: #fff;
+      border: none;
+    }
+  }
+}

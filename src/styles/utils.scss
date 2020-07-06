@@ -1,0 +1,5 @@
+@import './sizes.scss';
+
+@function px2rem($px) {
+  @return ($px/$rootFontSize) * 1rem;
+}

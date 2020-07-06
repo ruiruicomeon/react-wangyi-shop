@@ -1,0 +1,215 @@
+@import '@/styles/utils';
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  .breadcrumb {
+    font-size: 12px;
+    color: #333;
+    line-height: 1;
+    padding: 20px 0;
+
+    .breadcrumb__link {
+      color: #333;
+    }
+  }
+
+  .header {
+    display: flex;
+
+    .preview {
+      .preview__img {
+        display: block;
+        width: px2rem(428);
+        height: px2rem(428);
+        background-color: #f4f4f4;
+        border: 1px solid #e8e8e8;
+      }
+
+      .preview__list {
+        margin-top: px2rem(14);
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        .preview__item {
+          margin-left: px2rem(10);
+          box-sizing: border-box;
+          width: px2rem(78);
+          height: px2rem(78);
+          border: 1px solid #e8e8e8;
+          cursor: pointer;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:hover {
+            border: 2px solid #b4a078;
+            .preview__icon {
+              box-sizing: border-box;
+              width: px2rem(74);
+              height: px2rem(74);
+            }
+          }
+
+          .preview__icon {
+            box-sizing: border-box;
+            width: px2rem(76);
+            height: px2rem(76);
+          }
+        }
+      }
+    }
+
+    .detail {
+      margin-left: px2rem(32);
+      width: px2rem(620);
+
+      .title {
+        margin-top: px2rem(10);
+        font-size: px2rem(20);
+        font-weight: 700;
+        line-height: px2rem(20);
+        color: #333;
+      }
+      .subtitle {
+        color: #999;
+        margin-top: px2rem(7);
+        font-size: px2rem(14);
+      }
+
+      .info {
+        margin-top: px2rem(20);
+      }
+
+      .spec {
+        margin-top: px2rem(20);
+        margin-left: px2rem(10);
+        display: flex;
+        align-items: center;
+
+        .spec__title {
+          font-size: px2rem(12);
+          color: #666;
+          margin-right: px2rem(30);
+        }
+
+        .spec__select {
+          margin-right: px2rem(15);
+        }
+      }
+
+      .quantity {
+        margin-top: px2rem(20);
+        margin-left: px2rem(10);
+        display: flex;
+        align-items: center;
+        .quantity__title {
+          font-size: px2rem(12);
+          color: #666;
+          margin-right: px2rem(30);
+        }
+      }
+
+      .action {
+        display: flex;
+        align-items: center;
+        margin-left: px2rem(12);
+        margin-top: px2rem(30);
+
+        .action__buy {
+          margin-right: px2rem(10);
+          width: px2rem(168);
+          height: px2rem(50);
+          line-height: px2rem(50);
+          font-size: px2rem(18);
+          color: #b4a078;
+          border: 1px solid #b4a078;
+          background-color: #f5f3ef;
+          cursor: pointer;
+        }
+        .action__cart {
+          border: 1px solid #b4a078;
+          background-color: #b4a078;
+          width: px2rem(168);
+          height: px2rem(50);
+          line-height: px2rem(50);
+          font-size: px2rem(18);
+          color: #fff;
+          border: 1px solid #b4a078;
+          background-color: #b4a078;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .action__icon {
+            display: inline-block;
+            margin-right: px2rem(10);
+            background-image: url('~@/assets/home/cart_x1.png');
+            background-position: 0 -68px;
+            height: 21px;
+            width: 21px;
+          }
+        }
+      }
+    }
+  }
+
+  .like {
+  }
+
+  .body {
+    margin-top: px2rem(30);
+    .relevant {
+      width: px2rem(750);
+      padding-bottom: px2rem(200);
+
+      .tabs {
+        border: 1px solid #e8e8e8;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+
+        .tab {
+          position: relative;
+          width: px2rem(124);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: px2rem(14);
+          line-height: px2rem(40);
+          border-right: 1px solid #e8e8e8;
+          cursor: pointer;
+        }
+        .tab_active {
+          border-top: 3px solid #b4a078;
+          background-color: #fff;
+          color: #b4a078;
+
+          &::after {
+            content: '';
+            width: px2rem(124);
+            height: 2px;
+            border-bottom: 2px solid white;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+          }
+        }
+      }
+
+      .comments {
+      }
+      .pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: px2rem(30);
+      }
+    }
+  }
+}

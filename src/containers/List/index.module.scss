@@ -1,0 +1,98 @@
+@import '@/styles/utils.scss';
+@import '@/styles/colors.scss';
+
+.list {
+  width: 100%;
+  background-color: #f5f5f5;
+
+  .content {
+    .breadcrumb {
+      padding: px2rem(20) 0;
+      font-size: px2rem(12);
+      line-height: px2rem(12);
+      color: $fontBlack;
+
+      .breadcrumb__link {
+        &:hover {
+          color: $mainGold;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .panel {
+      margin-top: px2rem(30);
+      padding: 0 px2rem(40);
+      background-color: #fff;
+      margin-bottom: px2rem(80);
+
+      .filter {
+        .filter__row {
+          padding-top: px2rem(20);
+          display: flex;
+          border-top: 1px dashed #dedede;
+
+          &:first-child {
+            border-top: 0;
+          }
+
+          .filter__title {
+            font-size: px2rem(14);
+            line-height: px2rem(14);
+            color: #999;
+            width: px2rem(70);
+            flex-basis: px2rem(70);
+            white-space: nowrap;
+          }
+
+          .filter__items {
+            display: flex;
+            flex-wrap: wrap;
+
+            .filter__item {
+              margin-right: px2rem(30);
+              margin-bottom: px2rem(16);
+              font-size: px2rem(14);
+              line-height: px2rem(14);
+              color: $fontBlack;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+
+              &:hover {
+                color: $mainGold;
+              }
+
+              .filter__icon {
+                display: flex;
+                flex-direction: column;
+                margin-left: px2rem(4);
+                height: px2rem(14);
+
+                .filter__up {
+                  background-image: url('~@/assets/home/icon_normal.png');
+                  background-position: -1px -6470px;
+                  width: 10px;
+                  height: 8px;
+                }
+
+                .filter__down {
+                  background-image: url('~@/assets/home/icon_normal.png');
+                  background-position: 0px -6470px;
+                  width: 10px;
+                  height: 8px;
+                  transform: rotate(180deg);
+                  transform-origin: 50% 100%;
+                }
+              }
+            }
+
+            .filter__item_active {
+              color: $mainGold !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
